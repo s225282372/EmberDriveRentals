@@ -3,16 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Properties\\launchSettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Properties\\launchSettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Migrations\\20251119123032_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20251119123032_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\CarRentalAPI.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CarRentalAPI.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\CarRentalAPI.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CarRentalAPI.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\DTOs\\LoginDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DTOs\\LoginDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\DTOs\\AuthResponseDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DTOs\\AuthResponseDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Controllers\\AuthController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,10 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Data\\ApplicationDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Data\\ApplicationDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\CarRentalAPI.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CarRentalAPI.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Models\\User.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -57,10 +73,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Models\\Review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\Review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -75,6 +87,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-19T15:16:08.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "20251119123032_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Migrations\\20251119123032_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Migrations\\20251119123032_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Migrations\\20251119123032_InitialCreate.cs",
+              "RelativeToolTip": "Migrations\\20251119123032_InitialCreate.cs",
+              "ViewState": "AgIAAMwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T15:12:09.959Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CarRentalAPI.http",
+              "DocumentMoniker": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\CarRentalAPI.http",
+              "RelativeDocumentMoniker": "CarRentalAPI.http",
+              "ToolTip": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\CarRentalAPI.http",
+              "RelativeToolTip": "CarRentalAPI.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-11-19T15:11:02.188Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "LoginDto.cs",
               "DocumentMoniker": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\DTOs\\LoginDto.cs",
               "RelativeDocumentMoniker": "DTOs\\LoginDto.cs",
@@ -87,7 +138,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "AuthResponseDto.cs",
               "DocumentMoniker": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\DTOs\\AuthResponseDto.cs",
               "RelativeDocumentMoniker": "DTOs\\AuthResponseDto.cs",
@@ -100,7 +151,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
@@ -113,7 +164,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "JwtService.cs",
               "DocumentMoniker": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Services\\JwtService.cs",
               "RelativeDocumentMoniker": "Services\\JwtService.cs",
@@ -126,20 +177,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAABIAAABiAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAABIAAABiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-18T16:48:00.531Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-18T16:49:11.795Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "RegisterDto.cs",
               "DocumentMoniker": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\DTOs\\RegisterDto.cs",
               "RelativeDocumentMoniker": "DTOs\\RegisterDto.cs",
@@ -152,98 +216,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Car.cs",
-              "DocumentMoniker": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Models\\Car.cs",
-              "RelativeDocumentMoniker": "Models\\Car.cs",
-              "ToolTip": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Models\\Car.cs",
-              "RelativeToolTip": "Models\\Car.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T16:56:14.58Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "MaintenanceRecord.cs",
-              "DocumentMoniker": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Models\\MaintenanceRecord.cs",
-              "RelativeDocumentMoniker": "Models\\MaintenanceRecord.cs",
-              "ToolTip": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Models\\MaintenanceRecord.cs",
-              "RelativeToolTip": "Models\\MaintenanceRecord.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T16:55:02.555Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "DamageReport.cs",
-              "DocumentMoniker": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Models\\DamageReport.cs",
-              "RelativeDocumentMoniker": "Models\\DamageReport.cs",
-              "ToolTip": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Models\\DamageReport.cs",
-              "RelativeToolTip": "Models\\DamageReport.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T16:54:56.126Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Review.cs",
-              "DocumentMoniker": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Models\\Review.cs",
-              "RelativeDocumentMoniker": "Models\\Review.cs",
-              "ToolTip": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Models\\Review.cs",
-              "RelativeToolTip": "Models\\Review.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T16:54:32.217Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Booking.cs",
-              "DocumentMoniker": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Models\\Booking.cs",
-              "RelativeDocumentMoniker": "Models\\Booking.cs",
-              "ToolTip": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Models\\Booking.cs",
-              "RelativeToolTip": "Models\\Booking.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAQwCwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T16:54:21.246Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAFkAAABPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T16:47:26.805Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Models\\User.cs",
-              "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T16:46:26.527Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "CarRentalAPI.csproj",
               "DocumentMoniker": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\CarRentalAPI.csproj",
               "RelativeDocumentMoniker": "CarRentalAPI.csproj",
@@ -256,15 +229,93 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "MaintenanceRecord.cs",
+              "DocumentMoniker": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Models\\MaintenanceRecord.cs",
+              "RelativeDocumentMoniker": "Models\\MaintenanceRecord.cs",
+              "ToolTip": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Models\\MaintenanceRecord.cs",
+              "RelativeToolTip": "Models\\MaintenanceRecord.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T16:55:02.555Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-18T16:49:11.795Z",
+              "Title": "Car.cs",
+              "DocumentMoniker": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Models\\Car.cs",
+              "RelativeDocumentMoniker": "Models\\Car.cs",
+              "ToolTip": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Models\\Car.cs",
+              "RelativeToolTip": "Models\\Car.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T16:56:14.58Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "DamageReport.cs",
+              "DocumentMoniker": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Models\\DamageReport.cs",
+              "RelativeDocumentMoniker": "Models\\DamageReport.cs",
+              "ToolTip": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Models\\DamageReport.cs",
+              "RelativeToolTip": "Models\\DamageReport.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T16:54:56.126Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Review.cs",
+              "DocumentMoniker": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Models\\Review.cs",
+              "RelativeDocumentMoniker": "Models\\Review.cs",
+              "ToolTip": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Models\\Review.cs",
+              "RelativeToolTip": "Models\\Review.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T16:54:32.217Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Booking.cs",
+              "DocumentMoniker": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Models\\Booking.cs",
+              "RelativeDocumentMoniker": "Models\\Booking.cs",
+              "ToolTip": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Models\\Booking.cs",
+              "RelativeToolTip": "Models\\Booking.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAQwCwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T16:54:21.246Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAFkAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T16:47:26.805Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T16:46:26.527Z",
               "EditorCaption": ""
             }
           ]
