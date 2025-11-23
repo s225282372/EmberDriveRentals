@@ -13,11 +13,16 @@ namespace CarRentalAPI.Controllers
     {
         private readonly ApplicationDbContext _context;
         private readonly IJwtService _jwtService;
+        private readonly IEmailService _emailService;
 
-        public AuthController(ApplicationDbContext context, IJwtService jwtService)
+        public AuthController(
+            ApplicationDbContext context,
+            IJwtService jwtService,
+            IEmailService emailService)
         {
             _context = context;
             _jwtService = jwtService;
+            _emailService = emailService;
         }
 
         /// <summary>
@@ -44,6 +49,9 @@ namespace CarRentalAPI.Controllers
 
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
+
+            // Send welcome email (fire and forget - don't wait)
+            _ = _emailService.SendWelcomeEmailAsync(user.Email, user.FullName);
 
             // Generate JWT token
             var token = _jwtService.GenerateToken(user);

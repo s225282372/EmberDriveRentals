@@ -22,8 +22,8 @@ namespace CarRentalAPI.Helpers
         public int TotalPages { get; set; }
         public int PageSize { get; set; }
         public int TotalCount { get; set; }
-        public bool HasPrevious => CurrentPage > 1;
-        public bool HasNext => CurrentPage < TotalPages;
+        public bool HasPrevious { get; set; }
+        public bool HasNext { get; set; }
         public List<T> Items { get; set; } = new List<T>();
     }
 
@@ -40,12 +40,16 @@ namespace CarRentalAPI.Helpers
                 .Take(pageSize)
                 .ToListAsync();
 
+            var totalPages = (int)Math.Ceiling(count / (double)pageSize);
+
             return new PagedResponse<T>
             {
                 CurrentPage = pageNumber,
-                TotalPages = (int)Math.Ceiling(count / (double)pageSize),
+                TotalPages = totalPages,
                 PageSize = pageSize,
                 TotalCount = count,
+                HasPrevious = pageNumber > 1,
+                HasNext = pageNumber < totalPages,
                 Items = items
             };
         }

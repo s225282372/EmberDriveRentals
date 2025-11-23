@@ -287,3 +287,7 @@ C:\Users\USER.DESKTOP-R2ESL0M\Documents\GitHub\EmberDriveRentals\CarRentalAPI\ob
 C:\Users\USER.DESKTOP-R2ESL0M\Documents\GitHub\EmberDriveRentals\CarRentalAPI\obj\Debug\net9.0\CarRenta.A1005198.Up2Date
 C:\Users\USER.DESKTOP-R2ESL0M\Documents\GitHub\EmberDriveRentals\CarRentalAPI\obj\Debug\net9.0\CarRentalAPI.genruntimeconfig.cache
 C:\Users\USER.DESKTOP-R2ESL0M\Documents\GitHub\EmberDriveRentals\CarRentalAPI\obj\Debug\net9.0\ref\CarRentalAPI.dll
+C:\Users\USER.DESKTOP-R2ESL0M\Documents\GitHub\EmberDriveRentals\CarRentalAPI\bin\Debug\net9.0\CarRentalAPI.staticwebassets.runtime.json
+C:\Users\USER.DESKTOP-R2ESL0M\Documents\GitHub\EmberDriveRentals\CarRentalAPI\bin\Debug\net9.0\BouncyCastle.Cryptography.dll
+C:\Users\USER.DESKTOP-R2ESL0M\Documents\GitHub\EmberDriveRentals\CarRentalAPI\bin\Debug\net9.0\MailKit.dll
+C:\Users\USER.DESKTOP-R2ESL0M\Documents\GitHub\EmberDriveRentals\CarRentalAPI\bin\Debug\net9.0\MimeKit.dll

@@ -5,6 +5,8 @@ using System.Security.Claims;
 using CarRentalAPI.Data;
 using CarRentalAPI.DTOs;
 using CarRentalAPI.Models;
+using CarRentalAPI.Services;
+using CarRentalAPI.Helpers;
 
 namespace CarRentalAPI.Controllers
 {
@@ -14,20 +16,19 @@ namespace CarRentalAPI.Controllers
     public class BookingsController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
+        private readonly IEmailService _emailService;
 
-        public BookingsController(ApplicationDbContext context)
+        public BookingsController(ApplicationDbContext context, IEmailService emailService)
         {
             _context = context;
+            _emailService = emailService;
         }
 
         /// <summary>
-        /// Get all bookings (Admin only) or user's own bookings
+        /// Get all bookings with pagination and search (Admin only) or user's own bookings
         /// </summary>
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<BookingDto>>> GetBookings(
-            [FromQuery] string? status,
-            [FromQuery] Guid? carId,
-            [FromQuery] Guid? userId)
+        public async Task<ActionResult<PagedResponse<BookingDto>>> GetBookings([FromQuery] BookingSearchParams searchParams)
         {
             var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var isAdmin = User.IsInRole("Admin");
@@ -45,22 +46,55 @@ namespace CarRentalAPI.Controllers
             else
             {
                 // Admin can filter by userId
-                if (userId.HasValue)
-                    query = query.Where(b => b.UserId == userId.Value);
+                if (searchParams.UserId.HasValue)
+                    query = query.Where(b => b.UserId == searchParams.UserId.Value);
+            }
+
+            // Search term
+            if (!string.IsNullOrEmpty(searchParams.SearchTerm))
+            {
+                var searchTerm = searchParams.SearchTerm.ToLower();
+                query = query.Where(b =>
+                    b.User.FullName.ToLower().Contains(searchTerm) ||
+                    b.User.Email.ToLower().Contains(searchTerm) ||
+                    b.Car.Make.ToLower().Contains(searchTerm) ||
+                    b.Car.Model.ToLower().Contains(searchTerm)
+                );
             }
 
             // Apply filters
-            if (!string.IsNullOrEmpty(status))
-                query = query.Where(b => b.Status == status);
+            if (!string.IsNullOrEmpty(searchParams.Status))
+                query = query.Where(b => b.Status == searchParams.Status);
 
-            if (carId.HasValue)
-                query = query.Where(b => b.CarId == carId.Value);
+            if (searchParams.CarId.HasValue)
+                query = query.Where(b => b.CarId == searchParams.CarId.Value);
 
-            var bookings = await query
-                .OrderByDescending(b => b.CreatedAt)
-                .ToListAsync();
+            if (searchParams.StartDate.HasValue)
+                query = query.Where(b => b.StartDate >= searchParams.StartDate.Value);
 
-            var bookingDtos = bookings.Select(b => new BookingDto
+            if (searchParams.EndDate.HasValue)
+                query = query.Where(b => b.EndDate <= searchParams.EndDate.Value);
+
+            // Sorting
+            query = searchParams.SortBy?.ToLower() switch
+            {
+                "startdate" => searchParams.SortOrder == "desc"
+                    ? query.OrderByDescending(b => b.StartDate)
+                    : query.OrderBy(b => b.StartDate),
+                "totalprice" => searchParams.SortOrder == "desc"
+                    ? query.OrderByDescending(b => b.TotalPrice)
+                    : query.OrderBy(b => b.TotalPrice),
+                _ => searchParams.SortOrder == "desc"
+                    ? query.OrderByDescending(b => b.CreatedAt)
+                    : query.OrderBy(b => b.CreatedAt)
+            };
+
+            var pagedBookings = await query.ToPagedResponseAsync(
+                searchParams.PageNumber,
+                searchParams.PageSize
+            );
+
+            var bookingDtos = pagedBookings.Items.Select(b => new BookingDto
             {
                 BookingId = b.BookingId,
                 UserId = b.UserId,
@@ -77,7 +111,19 @@ namespace CarRentalAPI.Controllers
                 CreatedAt = b.CreatedAt
             }).ToList();
 
-            return Ok(bookingDtos);
+            // Return paginated response with DTOs
+            var response = new PagedResponse<BookingDto>
+            {
+                CurrentPage = pagedBookings.CurrentPage,
+                TotalPages = pagedBookings.TotalPages,
+                PageSize = pagedBookings.PageSize,
+                TotalCount = pagedBookings.TotalCount,
+                HasPrevious = pagedBookings.HasPrevious,
+                HasNext = pagedBookings.HasNext,
+                Items = bookingDtos
+            };
+
+            return Ok(response);
         }
 
         /// <summary>
@@ -192,6 +238,17 @@ namespace CarRentalAPI.Controllers
             await _context.Entry(booking).Reference(b => b.User).LoadAsync();
             await _context.Entry(booking).Reference(b => b.Car).LoadAsync();
 
+            // Send booking confirmation email
+            var carName = $"{booking.Car.Make} {booking.Car.Model} {booking.Car.Year}";
+            _ = _emailService.SendBookingConfirmationAsync(
+                booking.User.Email,
+                booking.User.FullName,
+                carName,
+                booking.StartDate,
+                booking.EndDate,
+                booking.TotalPrice
+            );
+
             var bookingDto = new BookingDto
             {
                 BookingId = booking.BookingId,
@@ -219,7 +276,10 @@ namespace CarRentalAPI.Controllers
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> UpdateBookingStatus(Guid id, UpdateBookingStatusDto statusDto)
         {
-            var booking = await _context.Bookings.FindAsync(id);
+            var booking = await _context.Bookings
+                .Include(b => b.User)
+                .Include(b => b.Car)
+                .FirstOrDefaultAsync(b => b.BookingId == id);
 
             if (booking == null)
             {
@@ -230,6 +290,15 @@ namespace CarRentalAPI.Controllers
             booking.UpdatedAt = DateTime.UtcNow;
 
             await _context.SaveChangesAsync();
+
+            // Send status update email
+            var carName = $"{booking.Car.Make} {booking.Car.Model} {booking.Car.Year}";
+            _ = _emailService.SendBookingStatusUpdateAsync(
+                booking.User.Email,
+                booking.User.FullName,
+                carName,
+                booking.Status
+            );
 
             return NoContent();
         }

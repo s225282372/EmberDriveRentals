@@ -17,6 +17,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 // Register Services
 builder.Services.AddScoped<CarRentalAPI.Services.IJwtService, CarRentalAPI.Services.JwtService>();
+builder.Services.AddScoped<CarRentalAPI.Services.IEmailService, CarRentalAPI.Services.EmailService>();
+builder.Services.AddScoped<CarRentalAPI.Services.IFileStorageService, CarRentalAPI.Services.FileStorageService>();
 
 // JWT Authentication
 var jwtKey = builder.Configuration["Jwt:Key"] ?? throw new InvalidOperationException("JWT Key not configured");
@@ -66,6 +68,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseStaticFiles(); // Enable serving static files from wwwroot
 
 app.UseCors("AllowFrontend");
 
