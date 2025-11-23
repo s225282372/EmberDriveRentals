@@ -184,6 +184,47 @@ namespace CarRentalAPI.Migrations
                     b.ToTable("MaintenanceRecords");
                 });
 
+            modelBuilder.Entity("CarRentalAPI.Models.RefreshToken", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeviceInfo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("ExpiresAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("IpAddress")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsRevoked")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("RevokedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Token")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Token")
+                        .IsUnique();
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("RefreshTokens");
+                });
+
             modelBuilder.Entity("CarRentalAPI.Models.Review", b =>
                 {
                     b.Property<Guid>("ReviewId")
@@ -261,10 +302,10 @@ namespace CarRentalAPI.Migrations
                         new
                         {
                             UserId = new Guid("11111111-1111-1111-1111-111111111111"),
-                            CreatedAt = new DateTime(2025, 11, 19, 12, 30, 30, 276, DateTimeKind.Utc).AddTicks(9832),
+                            CreatedAt = new DateTime(2025, 11, 23, 21, 11, 28, 658, DateTimeKind.Utc).AddTicks(7501),
                             Email = "admin@carrental.com",
                             FullName = "System Administrator",
-                            PasswordHash = "$2a$11$O9A0dFoH/7T29N3bwTHi4ONyC1uO/NrdCKM10toNEi7vW1WunXXdy",
+                            PasswordHash = "$2a$11$elXl/16w2IEahtL9xxXKZup6SGQ6t2ZtVE7PIbN7IsBNeoxc7lM5e",
                             Role = "Admin"
                         });
                 });
@@ -308,6 +349,17 @@ namespace CarRentalAPI.Migrations
                         .IsRequired();
 
                     b.Navigation("Car");
+                });
+
+            modelBuilder.Entity("CarRentalAPI.Models.RefreshToken", b =>
+                {
+                    b.HasOne("CarRentalAPI.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("CarRentalAPI.Models.Review", b =>

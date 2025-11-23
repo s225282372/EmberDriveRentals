@@ -16,6 +16,7 @@ namespace CarRentalAPI.Data
         public DbSet<DamageReport> DamageReports { get; set; }
         public DbSet<Review> Reviews { get; set; }
         public DbSet<MaintenanceRecord> MaintenanceRecords { get; set; }
+        public DbSet<RefreshToken> RefreshTokens { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -77,6 +78,19 @@ namespace CarRentalAPI.Data
                     .HasForeignKey(m => m.CarId)
                     .OnDelete(DeleteBehavior.Restrict);
             });
+
+            // RefreshToken configurations
+            modelBuilder.Entity<RefreshToken>(entity =>
+            {
+                entity.HasIndex(e => e.Token).IsUnique();
+                entity.HasIndex(e => e.UserId);
+
+                entity.HasOne(r => r.User)
+                    .WithMany()
+                    .HasForeignKey(r => r.UserId)
+                    .OnDelete(DeleteBehavior.Cascade);
+            });
+
 
             // Seed initial admin user
             var adminId = Guid.Parse("11111111-1111-1111-1111-111111111111");
