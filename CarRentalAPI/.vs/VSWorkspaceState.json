@@ -4,11 +4,12 @@
     "\\Controllers",
     "\\Data",
     "\\DTOs",
+    "\\Helpers",
     "\\Migrations",
     "\\Models",
     "\\Properties",
     "\\Services"
   ],
-  "SelectedNode": "\\Models\\User.cs",
+  "SelectedNode": "\\Controllers\\AuthController.cs",
   "PreviewInSolutionExplorer": false
 }
