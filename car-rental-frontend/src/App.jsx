@@ -6,6 +6,8 @@ import ProtectedRoute from './components/auth/ProtectedRoute';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Cars from './pages/Cars';
+import CarDetails from './pages/CarDetails';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
         <Route path="/" element={<Layout />}>
           {/* Public Routes */}
           <Route index element={<Home />} />
+          <Route path="cars" element={<Cars />} />
+          <Route path="cars/:id" element={<CarDetails />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
 

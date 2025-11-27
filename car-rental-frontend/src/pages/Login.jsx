@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
 import useAuthStore from '../store/authStore';
+import Logo from '../components/common/Logo';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -43,8 +44,8 @@ const Login = () => {
           {/* Logo */}
           <div className="mb-10">
             <div className="flex items-center justify-center space-x-2 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-primary-600 to-primary-800 rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-2xl">🚗</span>
+              <div className="w-12 h-12 text-primary-600">
+                <Logo />
               </div>
               <span className="text-3xl font-bold">
                 Ember<span className="text-primary-600">Drive</span>
