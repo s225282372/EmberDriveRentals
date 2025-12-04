@@ -1,7 +1,7 @@
 
 # 🚗 EmberDrive Car Rental Management System 
 
-A full-stack car rental platform built with ASP.NET Core 8, featuring JWT authentication, advanced booking management, damage tracking, maintenance scheduling, and a comprehensive admin dashboard.
+Is a full-stack car rental platform built with ASP.NET Core 8, featuring JWT authentication, advanced booking management, damage tracking, maintenance scheduling, and a comprehensive admin dashboard.
 
 ---
 
