@@ -221,10 +221,10 @@ DELETE /api/Upload/image           # Delete image [Admin]
 ## 🚀 Getting Started
 
 ### Prerequisites
-- [.NET 8 SDK](https://dotnet.microsoft.com/download)
-- [SQL Server](https://www.microsoft.com/sql-server) or SQL Server Express
-- [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
-- [Node.js](https://nodejs.org/) (for frontend, when available)
+- [.NET 8 SDK]
+- [SQL Server] or SQL Server Express
+- [SQL Server Management Studio (SSMS)]
+- [Node.js] (for frontend, when available)
 
 ### Backend Setup
 
@@ -418,19 +418,6 @@ Full API documentation is available via Swagger UI when running the application:
 ```
 https://localhost:5001/swagger
 ```
-
-## 🤝 Contributing
-
-Contributions are welcome! This is a learning project, so feel free to:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
----
-
 ## 🗺️ Roadmap
 
 ### Phase 1: Backend ✅ (Complete)
@@ -444,11 +431,11 @@ Contributions are welcome! This is a learning project, so feel free to:
 - [x] File Upload
 
 ### Phase 2: Frontend 🚧 (In Progress)
-- [ ] React application setup ✅
-- [ ] Authentication UI ✅
-- [ ] Car listing & search ✅
-- [ ] Booking flow ✅
-- [ ] User dashboard ✅
+- [x] React application setup
+- [x] Authentication UI 
+- [x] Car listing & search
+- [x] Booking flow 
+- [x] User dashboard 
 - [ ] Admin panel
 - [ ] Responsive design
 
@@ -459,6 +446,18 @@ Contributions are welcome! This is a learning project, so feel free to:
 - [ ] Docker containerization
 - [ ] CI/CD pipeline
 - [ ] Cloud deployment (Azure/AWS)
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! This is a learning project, so feel free to:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ---
 
