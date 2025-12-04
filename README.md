@@ -1,5 +1,5 @@
 
-## 🚗 EmberDrive Car Rental Management System 
+# 🚗 EmberDrive Car Rental Management System 
 
 A full-stack car rental platform built with ASP.NET Core 8, featuring JWT authentication, advanced booking management, damage tracking, maintenance scheduling, and a comprehensive admin dashboard.
 
@@ -7,14 +7,14 @@ A full-stack car rental platform built with ASP.NET Core 8, featuring JWT authen
 
 ## 🚦 Project Status
 
-| Component | Status | Progress |
-|-----------|--------|----------|
-| **Backend API** | ✅ Complete | 100% |
-| **Database** | ✅ Complete | 100% |
-| **Authentication** | ✅ Complete | 100% |
-| **Frontend (React)** | 🚧 In Progress | 40% |
-| **Documentation** | 🚧 In Progress | 60% |
-| **Deployment** | ⏳ Planned | 0% |
+| Component | Status |
+|-----------|--------|
+| **Backend API** | ✅ Complete |
+| **Database** | ✅ Complete |
+| **Authentication** | ✅ Complete |
+| **Frontend (React)** | 🚧 In Progress |
+| **Documentation** | 🚧 In Progress |
+| **Deployment** | ⏳ Planned |
 
 ---
 
@@ -216,9 +216,6 @@ POST   /api/Upload/damage-image    # Upload damage image
 POST   /api/Upload/damage-images   # Upload multiple damage images
 DELETE /api/Upload/image           # Delete image [Admin]
 ```
-
-**Total: 60+ RESTful API endpoints** 🚀
-
 ---
 
 ## 🚀 Getting Started
@@ -233,7 +230,7 @@ DELETE /api/Upload/image           # Delete image [Admin]
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/CarRentalAPI.git
+   git clone https://github.com/s225282372/CarRentalAPI.git
    cd CarRentalAPI
    ```
 
@@ -403,7 +400,7 @@ IsRevoked (BIT)
 
 ## 🎯 Project Goals
 
-This project demonstrates:
+This main aim of this project is to demonstrates:
 
 1. **Clean Architecture** - Separation of concerns, maintainable code
 2. **Enterprise Patterns** - Service layer, DTOs, dependency injection
@@ -422,34 +419,6 @@ Full API documentation is available via Swagger UI when running the application:
 https://localhost:5001/swagger
 ```
 
-### Example Request/Response
-
-**POST /api/Auth/login**
-
-Request:
-```json
-{
-  "email": "user@example.com",
-  "password": "SecurePassword123!"
-}
-```
-
-Response:
-```json
-{
-  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
-  "refreshToken": "550e8400-e29b-41d4-a716-446655440000",
-  "user": {
-    "userId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-    "fullName": "John Doe",
-    "email": "user@example.com",
-    "role": "Customer"
-  }
-}
-```
-
----
-
 ## 🤝 Contributing
 
 Contributions are welcome! This is a learning project, so feel free to:
@@ -459,14 +428,6 @@ Contributions are welcome! This is a learning project, so feel free to:
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
----
-
-## 🙏 Acknowledgments
-
-- Built as a portfolio project to demonstrate full-stack development skills
-- Inspired by modern car rental platforms (Turo, Enterprise, Hertz)
-- Architecture patterns from industry best practices
 
 ---
 
@@ -483,11 +444,11 @@ Contributions are welcome! This is a learning project, so feel free to:
 - [x] File Upload
 
 ### Phase 2: Frontend 🚧 (In Progress)
-- [ ] React application setup
-- [ ] Authentication UI
-- [ ] Car listing & search
-- [ ] Booking flow
-- [ ] User dashboard
+- [ ] React application setup ✅
+- [ ] Authentication UI ✅
+- [ ] Car listing & search ✅
+- [ ] Booking flow ✅
+- [ ] User dashboard ✅
 - [ ] Admin panel
 - [ ] Responsive design
 
