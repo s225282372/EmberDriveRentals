@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { getImageUrl } from "../../services/api";  // Import helper
 
 const ImageGallery = ({ images }) => {
   const [selectedImage, setSelectedImage] = useState(0);
@@ -9,22 +10,29 @@ const ImageGallery = ({ images }) => {
     'https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=1200',
   ];
 
-  const displayImages = images && images.length > 0 ? images : defaultImages;
+  // ⭐ Process images to use correct URLs
+  const processedImages = images && images.length > 0 
+    ? images.map(img => getImageUrl(img))
+    : defaultImages;
 
   return (
     <div className="space-y-4">
       {/* Main Image */}
       <div className="aspect-video bg-gray-200 rounded-xl overflow-hidden">
         <img
-          src={displayImages[selectedImage]}
+          src={processedImages[selectedImage]}
           alt={`Car view ${selectedImage + 1}`}
           className="w-full h-full object-cover"
+          onError={(e) => {
+            console.error('Image failed to load:', processedImages[selectedImage]);
+            e.target.src = defaultImages[0]; // Fallback to default
+          }}
         />
       </div>
 
       {/* Thumbnail Grid */}
       <div className="grid grid-cols-4 gap-3">
-        {displayImages.map((image, index) => (
+        {processedImages.map((image, index) => (
           <button
             key={index}
             onClick={() => setSelectedImage(index)}
@@ -38,18 +46,21 @@ const ImageGallery = ({ images }) => {
               src={image}
               alt={`Thumbnail ${index + 1}`}
               className="w-full h-full object-cover"
+              onError={(e) => {
+                e.target.src = defaultImages[0];
+              }}
             />
           </button>
         ))}
       </div>
 
       {/* Navigation Arrows */}
-      {displayImages.length > 1 && (
+      {processedImages.length > 1 && (
         <div className="flex justify-between items-center">
           <button
             onClick={() =>
               setSelectedImage((prev) =>
-                prev === 0 ? displayImages.length - 1 : prev - 1
+                prev === 0 ? processedImages.length - 1 : prev - 1
               )
             }
             className="btn btn-secondary btn-sm"
@@ -61,13 +72,13 @@ const ImageGallery = ({ images }) => {
           </button>
 
           <span className="text-sm text-gray-600">
-            {selectedImage + 1} / {displayImages.length}
+            {selectedImage + 1} / {processedImages.length}
           </span>
 
           <button
             onClick={() =>
               setSelectedImage((prev) =>
-                prev === displayImages.length - 1 ? 0 : prev + 1
+                prev === processedImages.length - 1 ? 0 : prev + 1
               )
             }
             className="btn btn-secondary btn-sm"
@@ -84,4 +95,3 @@ const ImageGallery = ({ images }) => {
 };
 
 export default ImageGallery;
-

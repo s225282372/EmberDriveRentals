@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
 import { format, differenceInDays, addDays } from 'date-fns';
 import useAuthStore from '../../store/authStore';
+import bookingService from '../../services/bookingService';
 
 const BookingForm = ({ car, onBookingSuccess }) => {
   const navigate = useNavigate();
@@ -16,7 +17,7 @@ const BookingForm = ({ car, onBookingSuccess }) => {
     endDate: tomorrow,
   });
 
-  const [isChecking, setIsChecking] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -54,18 +55,34 @@ const BookingForm = ({ car, onBookingSuccess }) => {
       return;
     }
 
-    setIsChecking(true);
+    setIsSubmitting(true);
 
     try {
-      // Here we'll add the actual booking API call
-      toast.success('Booking request submitted!');
+      // Format dates for API (ISO format)
+      const bookingData = {
+        carId: car.carId,
+        startDate: new Date(formData.startDate).toISOString(),
+        endDate: new Date(formData.endDate).toISOString(),
+      };
+
+      const response = await bookingService.createBooking(bookingData);
+
+      toast.success('Booking created successfully! 🎉');
+      
+      // Redirect to My Bookings page
+      setTimeout(() => {
+        navigate('/my-bookings');
+      }, 1500);
+
       if (onBookingSuccess) {
-        onBookingSuccess();
+        onBookingSuccess(response);
       }
     } catch (error) {
-      toast.error(error.response?.data?.message || 'Booking failed');
+      console.error('Booking error:', error);
+      const errorMessage = error.response?.data?.message || 'Booking failed. Please try again.';
+      toast.error(errorMessage);
     } finally {
-      setIsChecking(false);
+      setIsSubmitting(false);
     }
   };
 
@@ -144,10 +161,10 @@ const BookingForm = ({ car, onBookingSuccess }) => {
         {/* Submit Button */}
         <button
           type="submit"
-          disabled={isChecking || car.status !== 'Available'}
+          disabled={isSubmitting || car.status !== 'Available'}
           className="btn btn-primary w-full btn-lg"
         >
-          {isChecking ? (
+          {isSubmitting ? (
             <span className="flex items-center justify-center">
               <div className="spinner w-5 h-5 mr-2"></div>
               Processing...

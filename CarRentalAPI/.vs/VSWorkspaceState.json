@@ -2,14 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\Controllers",
-    "\\Data",
-    "\\DTOs",
     "\\Helpers",
     "\\Migrations",
     "\\Models",
     "\\Properties",
-    "\\Services"
+    "\\Services",
+    "\\wwwroot",
+    "\\wwwroot\\uploads",
+    "\\wwwroot\\uploads\\cars"
   ],
-  "SelectedNode": "\\Controllers\\AuthController.cs",
+  "SelectedNode": "\\Controllers\\CarsController.cs",
   "PreviewInSolutionExplorer": false
 }

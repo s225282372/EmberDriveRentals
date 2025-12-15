@@ -1,6 +1,16 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'https://localhost:7000/api';
+const API_BASE_URL = 'http://localhost:5170/api'; // ✅ Correct for API calls
+
+//  Add this helper for static files (images)
+export const getImageUrl = (path) => {
+  if (!path) return null;
+  if (path.startsWith('http')) return path; // Already full URL
+  
+  // Static files are served from root, not /api
+  const staticBaseUrl = 'http://localhost:5170';
+  return `${staticBaseUrl}${path.startsWith('/') ? '' : '/'}${path}`;
+};
 
 const api = axios.create({
   baseURL: API_BASE_URL,
@@ -44,10 +54,8 @@ api.interceptors.response.use(
   async (error) => {
     const originalRequest = error.config;
 
-    // If error is 401 and we haven't tried to refresh yet
     if (error.response?.status === 401 && !originalRequest._retry) {
       if (isRefreshing) {
-        // If already refreshing, queue this request
         return new Promise((resolve, reject) => {
           failedQueue.push({ resolve, reject });
         })
@@ -66,36 +74,29 @@ api.interceptors.response.use(
       const refreshToken = localStorage.getItem('refreshToken');
 
       if (!refreshToken) {
-        // No refresh token, redirect to login
         localStorage.clear();
         window.location.href = '/login';
         return Promise.reject(error);
       }
 
       try {
-        // Try to refresh the token
         const response = await axios.post(`${API_BASE_URL}/Auth/refresh`, {
           refreshToken,
         });
 
         const { accessToken, refreshToken: newRefreshToken } = response.data;
 
-        // Save new tokens
         localStorage.setItem('accessToken', accessToken);
         localStorage.setItem('refreshToken', newRefreshToken);
 
-        // Update the failed request with new token
         originalRequest.headers.Authorization = `Bearer ${accessToken}`;
 
-        // Process queued requests
         processQueue(null, accessToken);
 
         isRefreshing = false;
 
-        // Retry the original request
         return api(originalRequest);
       } catch (refreshError) {
-        // Refresh failed, logout user
         processQueue(refreshError, null);
         isRefreshing = false;
 
@@ -111,4 +112,3 @@ api.interceptors.response.use(
 );
 
 export default api;
-

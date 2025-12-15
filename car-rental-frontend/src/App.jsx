@@ -8,6 +8,8 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Cars from './pages/Cars';
 import CarDetails from './pages/CarDetails';
+import MyBookings from './pages/MyBookings';
+import AdminDashboard from './pages/admin/AdminDashboard';
 
 function App() {
   return (
@@ -21,25 +23,25 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
 
-          {/* Protected Routes (Coming Soon) */}
-          {/* <Route
+          {/* Protected Routes */}
+          <Route
             path="my-bookings"
             element={
               <ProtectedRoute>
                 <MyBookings />
               </ProtectedRoute>
             }
-          /> */}
+          />
 
           {/* Admin Routes (Coming Soon) */}
-          {/* <Route
+          { <Route
             path="admin/*"
             element={
               <ProtectedRoute adminOnly>
                 <AdminDashboard />
               </ProtectedRoute>
             }
-          /> */}
+          /> }
         </Route>
       </Routes>
     </BrowserRouter>
@@ -47,3 +49,4 @@ function App() {
 }
 
 export default App;
+

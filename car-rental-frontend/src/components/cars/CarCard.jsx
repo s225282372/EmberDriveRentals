@@ -1,9 +1,12 @@
 import { Link } from 'react-router-dom';
+import { getImageUrl } from "../../services/api"; // ✅ Correct
 
 const CarCard = ({ car }) => {
   const defaultImage = 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=800';
+  
+  // ⭐ Use helper function
   const carImage = car.imageUrls && car.imageUrls.length > 0 
-    ? car.imageUrls[0] 
+    ? getImageUrl(car.imageUrls[0])
     : defaultImage;
 
   const getStatusBadge = (status) => {
@@ -24,6 +27,10 @@ const CarCard = ({ car }) => {
             src={carImage}
             alt={`${car.make} ${car.model}`}
             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+            onError={(e) => {
+              console.error('Image failed to load:', carImage);
+              e.target.src = defaultImage;
+            }}
           />
           <div className="absolute top-3 right-3">
             <span className={`badge ${getStatusBadge(car.status)}`}>
@@ -34,7 +41,6 @@ const CarCard = ({ car }) => {
 
         {/* Content */}
         <div className="space-y-3">
-          {/* Title */}
           <div>
             <h3 className="text-xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors">
               {car.make} {car.model}
@@ -42,7 +48,6 @@ const CarCard = ({ car }) => {
             <p className="text-sm text-gray-500">{car.year}</p>
           </div>
 
-          {/* Features */}
           {car.features && car.features.length > 0 && (
             <div className="flex flex-wrap gap-2">
               {car.features.slice(0, 3).map((feature, index) => (
@@ -58,7 +63,6 @@ const CarCard = ({ car }) => {
             </div>
           )}
 
-          {/* Price */}
           <div className="flex items-center justify-between pt-3 border-t border-gray-200">
             <div>
               <p className="text-2xl font-bold text-primary-600">

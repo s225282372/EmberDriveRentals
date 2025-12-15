@@ -281,6 +281,39 @@ namespace CarRentalAPI.Controllers
 
             return refreshToken;
         }
+
+
+        /// <summary>
+        /// Test authentication - Verify JWT is working
+        /// </summary>
+        [HttpGet("test")]
+        [Authorize]
+        public IActionResult TestAuth()
+        {
+            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            var email = User.FindFirst(ClaimTypes.Email)?.Value;
+            var name = User.FindFirst(ClaimTypes.Name)?.Value;
+            var role = User.FindFirst(ClaimTypes.Role)?.Value;
+            var jti = User.FindFirst(JwtRegisteredClaimNames.Jti)?.Value;
+
+            var allClaims = User.Claims.Select(c => new
+            {
+                Type = c.Type,
+                Value = c.Value
+            }).ToList();
+
+            return Ok(new
+            {
+                message = "Authentication is working!",
+                userId,
+                email,
+                name,
+                role,
+                jti,
+                totalClaims = allClaims.Count,
+                allClaims
+            });
+        }
     }
 }
 
