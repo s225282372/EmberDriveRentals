@@ -436,7 +436,7 @@ https://localhost:5001/swagger
 - [x] Car listing & search
 - [x] Booking flow 
 - [x] User dashboard 
-- [ ] Admin panel
+- [x] Admin panel
 - [ ] Responsive design
 
 ### Phase 3: Polish ⏳ (Planned)
@@ -446,18 +446,6 @@ https://localhost:5001/swagger
 - [ ] Docker containerization
 - [ ] CI/CD pipeline
 - [ ] Cloud deployment (Azure/AWS)
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! This is a learning project, so feel free to:
-
-1. Fork the repo
-2. Create a feature branch
-3. Commit your changes 
-4. Push to the branch 
-5. Open a Pull Request
 
 ---
 
