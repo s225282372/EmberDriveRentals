@@ -1,10 +1,35 @@
-import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import useAuthStore from '../store/authStore';
 
 const Home = () => {
+  const navigate = useNavigate();
+  const { isAuthenticated, isAdmin, user } = useAuthStore();
+
+  // Auto-redirect authenticated users based on their role
+  useEffect(() => {
+    if (isAuthenticated()) {
+      if (user?.role === 'Admin') {
+        navigate('/admin', { replace: true });
+      } else {
+        navigate('/cars', { replace: true });
+      }
+    }
+  }, [isAuthenticated, user, navigate]);
+
+  const handleExploreClick = () => {
+    // If admin, go to admin panel; otherwise go to cars
+    if (isAdmin()) {
+      navigate('/admin');
+    } else {
+      navigate('/cars');
+    }
+  };
+
   return (
     <div className="font-sans">
       {/* Hero Section with Premium Background */}
-      <div 
+      <div
         className="relative bg-cover bg-center bg-no-repeat overflow-hidden"
         style={{
           backgroundImage: "linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(220, 38, 38, 0.3) 50%, rgba(0, 0, 0, 0.8) 100%), url('https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=2400')",
@@ -13,7 +38,7 @@ const Home = () => {
       >
         {/* Animated gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 via-transparent to-black/40 animate-pulse" style={{ animationDuration: '8s' }}></div>
-        
+
         <div className="container-custom relative z-10 py-32 md:py-48">
           <div className="max-w-4xl">
             {/* Badge */}
@@ -29,20 +54,21 @@ const Home = () => {
                 EXTRAORDINARY
               </span>
             </h1>
-            
+
             <p className="text-xl md:text-2xl text-gray-200 mb-10 leading-relaxed max-w-2xl font-light">
               Experience automotive excellence with our handpicked collection of premium vehicles. Every drive is an adventure waiting to happen.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/cars">
-                <button className="btn btn-primary btn-lg shadow-2xl hover:shadow-red-500/50 hover:scale-105 transition-all duration-300 group">
-                  <span className="mr-2">EXPLORE FLEET</span>
-                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </button>
-              </Link>
+              <button
+                onClick={handleExploreClick}
+                className="btn btn-primary btn-lg shadow-2xl hover:shadow-red-500/50 hover:scale-105 transition-all duration-300 group"
+              >
+                <span className="mr-2">EXPLORE FLEET</span>
+                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </button>
               <button className="btn btn-outline text-white border-2 border-white/50 hover:bg-white hover:text-gray-900 btn-lg backdrop-blur-sm hover:scale-105 transition-all duration-300">
                 HOW IT WORKS
               </button>
@@ -91,15 +117,15 @@ const Home = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {[
-            { name: 'LUXURY SEDAN', desc: 'Elegance Redefined', img: 'https://images.unsplash.com/photo-1563720223809-1eb0e64c6f70?q=80&w=800' },
-            { name: 'POWER SUV', desc: 'Dominate Every Road', img: 'https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?q=80&w=800' },
-            { name: 'EXOTIC SPORTS', desc: 'Pure Adrenaline', img: 'https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=80&w=800' },
-            { name: 'SUPERCAR', desc: 'Beyond Limits', img: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=800' }
+            { name: 'LUXURY SEDAN', desc: 'Elegance Redefined', img: 'https://images.unsplash.com/photo-1617814076367-b759c7d7e738?q=80&w=800' },
+            { name: 'POWER SUV', desc: 'Dominate Every Road', img: 'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?q=80&w=800' },
+            { name: 'EXOTIC SPORTS', desc: 'Pure Adrenaline', img: 'https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?q=80&w=800' },
+            { name: 'SUPERCAR', desc: 'Beyond Limits', img: 'https://images.unsplash.com/photo-1580274455191-1c62238fa333?q=80&w=800' }
           ].map((category, idx) => (
             <div key={idx} className="group cursor-pointer">
               <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
                 <div className="aspect-[4/5] bg-gray-900">
-                  <img 
+                  <img
                     src={category.img}
                     alt={category.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90 group-hover:opacity-100"
@@ -127,7 +153,7 @@ const Home = () => {
         {/* Background pattern */}
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-red-900/20 to-gray-900"></div>
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '40px 40px' }}></div>
-        
+
         <div className="container-custom relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-black text-white mb-4 tracking-tight" style={{ fontFamily: "'Montserrat', sans-serif" }}>
@@ -141,17 +167,17 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { 
+              {
                 icon: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z',
                 title: 'Curated Excellence',
                 desc: 'Every vehicle is meticulously inspected, detailed, and maintained to the highest standards. We don\'t just rent cars—we deliver experiences.'
               },
-              { 
+              {
                 icon: 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
                 title: 'Crystal Clear Pricing',
                 desc: 'Zero surprises, zero hidden fees. What you see is exactly what you pay. Premium quality shouldn\'t come with premium confusion.'
               },
-              { 
+              {
                 icon: 'M13 10V3L4 14h7v7l9-11h-7z',
                 title: 'Instant Freedom',
                 desc: 'Book in 60 seconds, drive in 60 minutes. Our seamless platform gets you behind the wheel faster than ever before.'
@@ -182,7 +208,7 @@ const Home = () => {
           <div className="absolute inset-0 opacity-10">
             <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '50px 50px' }}></div>
           </div>
-          
+
           <div className="relative z-10">
             <h2 className="text-5xl md:text-6xl font-black mb-6 tracking-tight" style={{ fontFamily: "'Montserrat', sans-serif" }}>
               Ready to Ignite Your Drive?

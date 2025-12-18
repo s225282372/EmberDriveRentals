@@ -94,7 +94,7 @@ const BookingForm = ({ car, onBookingSuccess }) => {
       <div className="mb-6">
         <div className="flex items-baseline gap-2 mb-2">
           <span className="text-4xl font-bold text-primary-600">
-            ${car.pricePerDay}
+            R{car.pricePerDay}
           </span>
           <span className="text-gray-500">/day</span>
         </div>
@@ -145,14 +145,14 @@ const BookingForm = ({ car, onBookingSuccess }) => {
           <div className="bg-gray-50 rounded-lg p-4 space-y-2">
             <div className="flex justify-between text-sm">
               <span className="text-gray-600">
-                ${car.pricePerDay} × {days} {days === 1 ? 'day' : 'days'}
+                R{car.pricePerDay} × {days} {days === 1 ? 'day' : 'days'}
               </span>
-              <span className="font-semibold">${total.toFixed(2)}</span>
+              <span className="font-semibold">R{total.toFixed(2)}</span>
             </div>
             <div className="border-t border-gray-200 pt-2 flex justify-between">
               <span className="font-semibold text-gray-900">Total</span>
               <span className="text-2xl font-bold text-primary-600">
-                ${total.toFixed(2)}
+                R{total.toFixed(2)}
               </span>
             </div>
           </div>

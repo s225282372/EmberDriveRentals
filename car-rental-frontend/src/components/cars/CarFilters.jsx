@@ -116,7 +116,7 @@ const CarFilters = ({ filters, onFilterChange, onSearch }) => {
 
           {/* Min Price */}
           <div>
-            <label className="label">Min Price ($/day)</label>
+            <label className="label">Min Price (R/day)</label>
             <input
               type="number"
               name="minPrice"
@@ -130,7 +130,7 @@ const CarFilters = ({ filters, onFilterChange, onSearch }) => {
 
           {/* Max Price */}
           <div>
-            <label className="label">Max Price ($/day)</label>
+            <label className="label">Max Price (R/day)</label>
             <input
               type="number"
               name="maxPrice"
