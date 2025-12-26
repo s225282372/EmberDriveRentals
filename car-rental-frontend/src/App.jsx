@@ -16,8 +16,8 @@ import MyBookings from './pages/MyBookings';
 
 // Admin Pages
 import AdminDashboard from './pages/admin/AdminDashboard';
-// import AdminCars from './pages/admin/AdminCars';
-// import AdminBookings from './pages/admin/AdminBookings';
+import AdminCars from './pages/admin/AdminCars';
+import AdminBookings from './pages/admin/AdminBookings';
 // import AdminReviews from './pages/admin/AdminReviews';
 // import AdminDamages from './pages/admin/AdminDamages';
 // import AdminMaintenance from './pages/admin/AdminMaintenance';
@@ -90,8 +90,8 @@ function App() {
           <Route index element={<AdminDashboard />} />
 
           {/* Admin Sub-routes - Uncomment as you create these pages */}
-          {/* <Route path="cars" element={<AdminCars />} /> */}
-          {/* <Route path="bookings" element={<AdminBookings />} /> */}
+          <Route path="cars" element={<AdminCars />} /> 
+          <Route path="bookings" element={<AdminBookings />} /> 
           {/* <Route path="reviews" element={<AdminReviews />} /> */}
           {/* <Route path="damages" element={<AdminDamages />} /> */}
           {/* <Route path="maintenance" element={<AdminMaintenance />} /> */}

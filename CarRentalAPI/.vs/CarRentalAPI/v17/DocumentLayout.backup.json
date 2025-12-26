@@ -202,8 +202,7 @@
               "RelativeToolTip": "Controllers\\CarsController.cs",
               "ViewState": "AgIAACsAAAAAAAAAAAAUwHIBAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T20:02:35.877Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-20T20:02:35.877Z"
             },
             {
               "$type": "Document",
@@ -215,8 +214,7 @@
               "RelativeToolTip": "Models\\Car.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T16:56:14.58Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-18T16:56:14.58Z"
             },
             {
               "$type": "Document",
@@ -274,7 +272,7 @@
               "RelativeDocumentMoniker": "Services\\FileStorageService.cs",
               "ToolTip": "C:\\Users\\USER.DESKTOP-R2ESL0M\\Documents\\GitHub\\EmberDriveRentals\\CarRentalAPI\\Services\\FileStorageService.cs",
               "RelativeToolTip": "Services\\FileStorageService.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAAIAAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAEYAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-23T20:25:49.067Z",
               "EditorCaption": ""
