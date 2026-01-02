@@ -1,17 +1,12 @@
 import api from './api';
 
 const bookingService = {
-  // Create a new booking
-  createBooking: async (bookingData) => {
-    const response = await api.post('/Bookings', bookingData);
-    return response.data;
-  },
-
-  // Get user's bookings
-  getMyBookings: async (params = {}) => {
+  // Get all bookings with filters and pagination
+  getBookings: async (params = {}) => {
     const queryParams = new URLSearchParams();
     
     if (params.status) queryParams.append('status', params.status);
+    if (params.searchTerm) queryParams.append('searchTerm', params.searchTerm);
     if (params.pageNumber) queryParams.append('pageNumber', params.pageNumber);
     if (params.pageSize) queryParams.append('pageSize', params.pageSize);
 
@@ -19,9 +14,32 @@ const bookingService = {
     return response.data;
   },
 
-  // Get booking by ID
+  // Get single booking by ID
   getBookingById: async (id) => {
     const response = await api.get(`/Bookings/${id}`);
+    return response.data;
+  },
+
+  // Get user's bookings
+  getMyBookings: async (params = {}) => {
+    const queryParams = new URLSearchParams();
+    
+    if (params.pageNumber) queryParams.append('pageNumber', params.pageNumber);
+    if (params.pageSize) queryParams.append('pageSize', params.pageSize);
+
+    const response = await api.get(`/Bookings/my?${queryParams.toString()}`);
+    return response.data;
+  },
+
+  // Create a new booking
+  createBooking: async (bookingData) => {
+    const response = await api.post('/Bookings', bookingData);
+    return response.data;
+  },
+
+  // Update booking status (Admin only)
+  updateBookingStatus: async (id, status) => {
+    const response = await api.patch(`/Bookings/${id}/status`, { status });
     return response.data;
   },
 
@@ -31,7 +49,7 @@ const bookingService = {
     return response.data;
   },
 
-  // Get booking statistics (admin only)
+  // Get booking statistics (Admin only)
   getStatistics: async () => {
     const response = await api.get('/Bookings/statistics');
     return response.data;
@@ -39,4 +57,3 @@ const bookingService = {
 };
 
 export default bookingService;
-

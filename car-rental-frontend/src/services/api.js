@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:5170/api'; // ✅ Correct for API calls
+const API_BASE_URL = 'http://localhost:5170/api'; // API Calls base URL
 
 //  Add this helper for static files (images)
 export const getImageUrl = (path) => {

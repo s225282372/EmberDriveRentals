@@ -18,20 +18,20 @@ import MyBookings from './pages/MyBookings';
 import AdminDashboard from './pages/admin/AdminDashboard';
 import AdminCars from './pages/admin/AdminCars';
 import AdminBookings from './pages/admin/AdminBookings';
-// import AdminReviews from './pages/admin/AdminReviews';
-// import AdminDamages from './pages/admin/AdminDamages';
-// import AdminMaintenance from './pages/admin/AdminMaintenance';
+import AdminReviews from './pages/admin/AdminReviews';
+import AdminDamages from './pages/admin/AdminDamages';
+import AdminMaintenance from './pages/admin/AdminMaintenance';
 // import AdminUsers from './pages/admin/AdminUsers';
 
 // Component to redirect admins away from customer pages
 const CustomerOnlyRoute = ({ children }) => {
   const { user } = useAuthStore();
-  
+
   // If admin, redirect to admin panel
   if (user?.role === 'Admin') {
     return <Navigate to="/admin" replace />;
   }
-  
+
   return children;
 };
 
@@ -90,11 +90,11 @@ function App() {
           <Route index element={<AdminDashboard />} />
 
           {/* Admin Sub-routes - Uncomment as you create these pages */}
-          <Route path="cars" element={<AdminCars />} /> 
-          <Route path="bookings" element={<AdminBookings />} /> 
-          {/* <Route path="reviews" element={<AdminReviews />} /> */}
-          {/* <Route path="damages" element={<AdminDamages />} /> */}
-          {/* <Route path="maintenance" element={<AdminMaintenance />} /> */}
+          <Route path="cars" element={<AdminCars />} />
+          <Route path="bookings" element={<AdminBookings />} />
+          <Route path="reviews" element={<AdminReviews />} />
+          <Route path="damages" element={<AdminDamages />} />
+          <Route path="maintenance" element={<AdminMaintenance />} />
           {/* <Route path="users" element={<AdminUsers />} /> */}
         </Route>
 
