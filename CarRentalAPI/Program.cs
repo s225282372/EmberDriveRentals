@@ -7,6 +7,7 @@ using CarRentalAPI.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container
+builder.Services.AddScoped<IBookingService, BookingService>(); // Added this
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
@@ -159,7 +160,7 @@ app.UseStaticFiles(); // Enable serving static files from wwwroot
 app.UseCors("AllowFrontend");
 
 // CRITICAL: Order matters!
-app.UseAuthentication(); // MUST come before UseAuthorization
+app.UseAuthentication(); 
 app.UseAuthorization();
 
 app.MapControllers();

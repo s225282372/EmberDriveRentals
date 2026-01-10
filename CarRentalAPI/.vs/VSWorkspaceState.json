@@ -2,7 +2,7 @@
   "ExpandedNodes": [
     "",
     "\\Controllers",
-    "\\Helpers",
+    "\\DTOs",
     "\\Migrations",
     "\\Models",
     "\\Properties",
@@ -11,5 +11,6 @@
     "\\wwwroot\\uploads",
     "\\wwwroot\\uploads\\cars"
   ],
+  "SelectedNode": "\\Controllers\\BookingsController.cs",
   "PreviewInSolutionExplorer": false
 }
